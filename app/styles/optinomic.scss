@@ -1,1 +1,16 @@
+nav a.active {
+	background: $colorBlue500;
+	color: #fff;
+}
 
+nav a {
+	color: $colorBlueGrey300 !important;
+}
+
+    
+section {
+    padding: 50px 0 30px 0;
+}
+footer {
+    text-align: center;
+}
