@@ -13,7 +13,7 @@ app.controller('MainCtrl', function($scope, $timeout, $document, parallaxHelper,
     $scope.patient_full = 'Herr ' + $scope.factory_data.patients[0].lastName + ' ' + $scope.factory_data.patients[0].firstName;
 
 
-    $scope.background = parallaxHelper.createAnimator(-0.5);
+    $scope.background = parallaxHelper.createAnimator(-0.6);
 
     //---------------------------------------------------------
     // FUNCTIONS
