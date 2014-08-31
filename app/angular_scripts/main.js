@@ -1,1 +1,1 @@
-var app = angular.module('Optinomic', ['duScroll', 'optinomic-logo']);
+var app = angular.module('Optinomic', ['duScroll', 'duParallax', 'optinomic-logo']);

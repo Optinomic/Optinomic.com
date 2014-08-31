@@ -1,4 +1,4 @@
-app.controller('MainCtrl', function($scope, $timeout, $document, app_factory) {
+app.controller('MainCtrl', function($scope, $timeout, $document, parallaxHelper, app_factory) {
 
 
 
@@ -13,13 +13,14 @@ app.controller('MainCtrl', function($scope, $timeout, $document, app_factory) {
     $scope.patient_full = 'Herr ' + $scope.factory_data.patients[0].lastName + ' ' + $scope.factory_data.patients[0].firstName;
 
 
+    $scope.background = parallaxHelper.createAnimator(-0.5);
 
     //---------------------------------------------------------
     // FUNCTIONS
     //---------------------------------------------------------
 
     $scope.toTheTop = function() {
-        $document.scrollTop(0, 5000).then(function() {
+        $document.scrollTop(0, 8000).then(function() {
             console && console.log('You just scrolled to the top!');
         });
     }
