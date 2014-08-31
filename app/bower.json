@@ -19,6 +19,8 @@
   ],
   "dependencies": {
     "angular-scroll": "~0.6.1",
-    "angular": "~1.2.23"
+    "angular": "~1.2.23",
+    "jquery": "~2.1.1",
+    "ng-parallax": "~0.1.8"
   }
 }

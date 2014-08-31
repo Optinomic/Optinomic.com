@@ -29,6 +29,10 @@
 
     <!-- Page styles -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css">
+
+
+
 
 </head>
 
@@ -39,7 +43,11 @@
             <button class="menu">
                 <img src="images/hamburger.svg" alt="Menu">
             </button>
-            <h1 class="logo">Optinomic</h1>
+            <div class="logo">
+                <a href="#welcome" du-smooth-scroll offset="30">
+                    <optinomic-logo size="50" background="" fill="#EE3B16" animation="20" stroke="white" stroke-width=2 logo-src="/bower_components/optinomic-logo-master/src/optinomic.svg"></optinomic-logo>
+                </a>
+            </div>
             <section class="app-bar-actions">
                 <!-- Put App Bar Buttons Here -->
                 <!-- e.g <button><i class="icon icon-star"></i></button> -->
@@ -49,7 +57,13 @@
 
     <nav class="navdrawer-container promote-layer">
         <h4>Navigation</h4>
+
         <ul>
+            <li class="logo-optinomic">
+                <a href="#welcome" du-smooth-scroll offset="30">
+                    <optinomic-logo size="50" background="" fill="#e84e40" animation="20" stroke="white" stroke-width=2 logo-src="/bower_components/optinomic-logo-master/src/optinomic.svg"></optinomic-logo>
+                </a>
+            </li>
             <li><a href="#section-1" du-smooth-scroll du-scrollspy offset="30">Section 1</a>
             </li>
             <li><a href="#section-2" du-smooth-scroll du-scrollspy offset="30">Section 2</a>
@@ -64,41 +78,60 @@
 
     <main>
 
-        <h1>Angular.js Scrollspy Example</h1>
+        <section id="welcome">
+            <h2>Welcome</h2>
+
+
+
+            <p>Title</p>
+
+        </section>
         <section id="section-1">
             <h2>Section 1</h2>
+
+
+
             <p>Bacon ipsum dolor sit amet sausage tail capicola ground round hamburger ham hock. Short ribs pig andouille meatball, pastrami tri-tip fatback ham hock shank kielbasa swine. Rump pancetta jerky kielbasa doner beef ribs tongue hamburger strip steak drumstick andouille shoulder shank flank. Swine drumstick meatball pig beef sausage strip steak.</p>
 
-            <img src="http://lorempixel.com/1000/500/" alt="" />
+            <img class="wow bounce" src="http://lorempixel.com/1000/500/" alt="" />
         </section>
 
-        <section id="section-2">
+        <section id="section-2" data-wow-offset="1000">
             <h2>Section 2</h2>
             <p>Bacon strip steak ground round, tongue pastrami short ribs pork chop venison turducken sausage sirloin. Flank chicken pork chop capicola turkey turducken cow pork loin biltong meatball drumstick pancetta filet mignon ground round fatback. Ham hock jerky short ribs brisket. Meatloaf shoulder pork chop capicola, sirloin swine pig pork. Jerky ribeye hamburger pork loin sirloin kevin bresaola boudin chuck flank. Ham hock pork belly chicken jerky rump bresaola.</p>
+            <img class="wow bounce" src="http://lorempixel.com/1000/300/" alt="" />
         </section>
 
-        <section id="section-3">
+        <section class="wow slideInRight" id="section-3">
             <h2>Section 3</h2>
             <p>Shank fatback pastrami short loin, turkey jowl kielbasa ribeye chicken jerky drumstick flank ham. Swine shankle pork belly kielbasa shoulder flank jowl, sirloin doner. Kevin tri-tip bresaola leberkas. Swine ball tip cow strip steak. Ham filet mignon pork chop, pork fatback andouille pork loin shoulder jowl swine strip steak turducken prosciutto rump.</p>
 
-            <img src="http://lorempixel.com/1000/400/" alt="" />
+            <img class="wow bounce" src="http://lorempixel.com/1000/300/" alt="" />
 
             <p>Tongue tri-tip pastrami, shoulder rump pork belly ground round. Ham hock chuck leberkas doner, strip steak corned beef tri-tip capicola. Rump turkey ham sausage shankle. Flank shankle pork chop ham hock. Shankle venison kielbasa, pancetta swine beef ball tip t-bone bacon hamburger ground round ribeye flank. Turducken bacon bresaola, chicken kevin boudin ball tip strip steak filet mignon pork turkey shank ground round. Kielbasa fatback prosciutto pork chop, jerky ground round leberkas boudin ball tip beef shankle shoulder swine brisket.</p>
+            <img class="wow slideInUp fadeIn" data-wow-delay="2s" src="http://lorempixel.com/1000/300/" alt="" />
         </section>
 
-        <section id="section-4">
+        <section class="wow slideInRight" id="section-4">
             <h2>Section 4</h2>
-            <img src="http://lorempixel.com/1000/600/" alt="" />
 
             <p>Shoulder cow tenderloin chuck, pork chop jerky doner leberkas. Chuck sausage hamburger, kevin beef pork chop pork shoulder ground round ball tip turducken flank. Bresaola tri-tip meatloaf, salami venison tail pig shank shankle jowl sausage brisket cow biltong turducken. Swine turducken hamburger ball tip short loin prosciutto kevin jowl tri-tip. Doner meatloaf pork brisket.</p>
+            <img class="wow bounce" src="http://lorempixel.com/1000/300/" alt="" />
         </section>
         <footer>
             <button ng-click="toTheTop()">Take me back!</button>
         </footer>
     </main>
 
+
+
+
     <!-- Angular Scripts -->
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/optinomic-logo-master/lib/d3.v2.js"></script>
     <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/optinomic-logo-master/src/optinomic-logo.js"></script>
+
 
     <!-- Other Scripts -->
     <script src="/bower_components/angular-scroll/angular-scroll.js"></script>
@@ -111,8 +144,20 @@
 
 
     <!-- build:js scripts/main.min.js -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
+    <script>
+    var wow = new WOW({
+        boxClass: 'wow', // animated element css class (default is wow)
+        animateClass: 'animated', // animation css class (default is animated)
+        offset: 250, // distance to the element when triggering the animation (default is 0)
+        mobile: true, // trigger animations on mobile devices (default is true)
+        live: true // act on asynchronously loaded content (default is true)
+    });
+    wow.init();
+    </script>
+
 
 
 
