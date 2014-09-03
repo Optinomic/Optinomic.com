@@ -40,7 +40,7 @@ app.controller('MainCtrl', function($scope, $timeout, $document, parallaxHelper,
             }
         }
 
-       //console.log('get_visible_slides: visible_slides', visible_slides);
+        //console.log('get_visible_slides: visible_slides', visible_slides);
 
         // ------------------------------------
         // Loop durch alle aktivated Slides
@@ -52,7 +52,7 @@ app.controller('MainCtrl', function($scope, $timeout, $document, parallaxHelper,
             }
         }
 
-       //console.log('get_visible_slides: menu_slides', menu_slides);
+        //console.log('get_visible_slides: menu_slides', menu_slides);
 
         // Write Array
         $scope.slides = visible_slides;
@@ -76,13 +76,14 @@ app.controller('MainCtrl', function($scope, $timeout, $document, parallaxHelper,
 
     $scope.toTheTop = function() {
         $document.scrollTop(0, 8000).then(function() {
-            console && console.log('You just scrolled to the top!');
+            //console && console.log('You just scrolled to the top!');
         });
     }
 
-    var positionEnd = angular.element(document.getElementById('page_end'));
-    $scope.toPageEnd = function() {
-        $document.scrollTo(positionEnd, 0, 1000);
+    var positionStart = angular.element(document.getElementById('start'));
+    $scope.toStart = function() {
+        console && console.log('You just scrolled to the start!', positionStart);
+        $document.scrollTo(positionStart, 60, 1500);
     }
 
 

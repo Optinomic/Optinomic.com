@@ -35,20 +35,39 @@ app.factory('app_factory', function() {
 
 
         slides: [{
-            "id": 'about',
+            "url_label": 'Produkt',
             "title": 'Profession statt Konfession',
             "subtitle": 'Evidenzbasiertes Wissen über Ihren Patienten - per Knopfdruck.',
-            "url_label": 'Über',
             "partial": '/partials/slides/about.html',
             "menu": true,
             "activated": true
         },{
-            "id": 'data',
+            "url_label": 'Angebote',
+            "title": 'Unsere Angebote',
+            "subtitle": 'you say jump - we ask how height',
+            "partial": '/partials/slides/about.html',
+            "menu": true,
+            "activated": true
+        },{
+            "url_label": 'Geschäftsleitung',
+            "title": 'Geschäftsleitung.',
+            "subtitle": 'SBB: Schneller, besser, billiger.',
+            "partial": '/partials/slides/datenerfassung.html',
+            "menu": true,
+            "activated": true
+        },{
+            "url_label": 'Team',
             "title": 'Datenerfassung leicht gemacht.',
             "subtitle": 'Wirkt Ihre Behandlung oder war lediglich schönes Wetter?',
-            "url_label": 'Datenerfassung',
             "partial": '/partials/slides/datenerfassung.html',
-            "menu": false,
+            "menu": true,
+            "activated": true
+        },{
+            "url_label": 'Kontakt',
+            "title": 'Ich bin interessiert!',
+            "subtitle": 'Kontaktieren Sie uns jetzt!',
+            "partial": '/partials/slides/datenerfassung.html',
+            "menu": true,
             "activated": true
         }],
 
