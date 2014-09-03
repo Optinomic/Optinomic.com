@@ -19,63 +19,40 @@ app.factory('app_factory', function() {
         // Some Data-Arrays
         // ------------------------------------------
 
-        patients: [{
-            "address1": "Haldenstrasse 7",
-            "address2": " ",
-            "age": 35,
-            "birthdate": "1979-01-01T00:00:00.000Z",
-            "birthday": "1972-05-21",
-            "cisPid": 2346323,
-            "city": "Oberrieden",
-            "country": "CH",
-            "email": "beat@ottiger.org",
-            "firstName": "Beat",
-            "fourLetterCode": "BOTO",
-            "gender": "male",
-            "lastName": "Ottiger",
-            "notes": "Just me myself and I",
-            "phoneHome": "043 - 305 78 80",
-            "phoneMobile": "079 - 635 85 84",
-            "title": "Dipl. Psych.",
-            "zipCode": "8942"
+        welcome_ticker_de: [{
+            "title": 'Profession statt Konfession',
+            "subtitle": 'Evidenzbasiertes Wissen über Ihren Patienten - per Knopfdruck.'
         }, {
-            "address1": "Fachstrasse 73a",
-            "address2": " ",
-            "age": 45,
-            "birthdate": "1979-01-01T00:00:00.000Z",
-            "birthday": "1979-01-01",
-            "cisPid": 2346323,
-            "city": "London",
-            "country": "GB",
-            "email": "beat@ottiger.org",
-            "firstName": "Martina",
-            "fourLetterCode": "MSZI",
-            "gender": "female",
-            "lastName": "Hingis",
-            "notes": "Once I played tennis.",
-            "phoneHome": "043 - 305 78 80",
-            "phoneMobile": "079 - 635 85 84",
-            "title": "",
-            "zipCode": "2341"
+            "title": '(Prozess-) Forschung',
+            "subtitle": 'Wirkt Ihre Behandlung oder war lediglich schönes Wetter?'
+        }, {
+            "title": 'Moderne Statistik',
+            "subtitle": 'Vergessen Sie alles über Statistik, was Sie bereits vergessen haben!'
+        }, {
+            "title": 'Erkennen und Verstehen',
+            "subtitle": '(Therapie-) Prozesse visualisieren'
         }],
 
-        messages_array: [{
-            "datum": "07.07.2014",
-            "message": "Ein wunderschöner Tag",
-            "name": "Beat Ottiger"
-        }, {
-            "datum": "08.07.2014",
-            "message": "So ein schöner Tag",
-            "name": "Tom"
-        }, {
-            "datum": "18.07.2014",
-            "message": "Testnachricht",
-            "name": "Ottiger"
-        }, {
-            "datum": "07.08.2014",
-            "message": "Love me tender",
-            "name": "Elvis Presley"
+
+        slides: [{
+            "id": 'about',
+            "title": 'Profession statt Konfession',
+            "subtitle": 'Evidenzbasiertes Wissen über Ihren Patienten - per Knopfdruck.',
+            "url_label": 'Über',
+            "partial": '/partials/slides/about.html',
+            "menu": true,
+            "activated": true
+        },{
+            "id": 'data',
+            "title": 'Datenerfassung leicht gemacht.',
+            "subtitle": 'Wirkt Ihre Behandlung oder war lediglich schönes Wetter?',
+            "url_label": 'Datenerfassung',
+            "partial": '/partials/slides/datenerfassung.html',
+            "menu": false,
+            "activated": true
         }],
+
+
 
         modules_array: [{
             "id": "1",
