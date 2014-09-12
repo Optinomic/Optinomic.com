@@ -1,7 +1,6 @@
 <!doctype html>
-<html lang="" ng-app="Optinomic">
-
-<head>
+<html lang="">
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
@@ -29,117 +28,49 @@
 
     <!-- Page styles -->
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css">
-
-
-
-
-</head>
-
-<body ng-controller="MainCtrl">
-
+  </head>
+  <body>
     <header class="app-bar promote-layer">
-        <div class="app-bar-container">
-            <button class="menu">
-                <img src="images/hamburger.svg" alt="Menu">
-            </button>
-            <div class="logo">
-                <a href="#welcome">
-                    <optinomic-logo size="48" background="transparent" fill="#EE3B16" animation="55" stroke="white" stroke-width=2 logo-src="/bower_components/optinomic-logo-master/src/optinomic.svg"></optinomic-logo>
-                </a>
-            </div>
-            <section class="app-bar-actions">
-                <!-- Put App Bar Buttons Here -->
-                <!-- e.g <button><i class="icon icon-star"></i></button> -->
-            </section>
-        </div>
+      <div class="app-bar-container">
+        <button class="menu"><img src="images/hamburger.svg" alt="Menu"></button>
+        <h1 class="logo">Web <strong>Starter Kit</strong></h1>
+        <section class="app-bar-actions">
+        <!-- Put App Bar Buttons Here -->
+        <!-- e.g <button><i class="icon icon-star"></i></button> -->
+        </section>
+      </div>
     </header>
 
     <nav class="navdrawer-container promote-layer">
-        <h4>Navigation</h4>
-
-        <ul>
-            <li class="logo-optinomic">
-                <a href="#welcome" du-smooth-scroll offset="60">
-                    <optinomic-logo size="48" background="transparent" fill="#e84e40" animation="55" stroke="white" stroke-width=2 logo-src="/bower_components/optinomic-logo-master/src/optinomic.svg"></optinomic-logo>
-                </a>
-            </li>
-            <li ng-repeat="slide in slides_menu">
-                <a href="#{{slide.url_label}}" du-smooth-scroll du-scrollspy offset="60">{{slide.url_label}}</a>
-            </li>
-        </ul>
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="#hello">Hello</a></li>
+        <li><a href="#get-started">Get Started</a></li>
+        <li><a href="styleguide.html">Style Guide</a></li>
+      </ul>
     </nav>
 
+    <main>
+      <h1 id="hello">Hello!</h1>
+      <p>Welcome to Web Starter Kit.</p>
 
-
-    <div id="welcome">
-        <img class="w-parallax" src="/images/ein_therapy.jpg" du-parallax x="accelleratedScroll" y="background" alt="Optinomic - Welcome" />
-
-        <div class="w-content wow rotateInUpLeft">
-            <h1>{{current_headline.title}}</h1>
-            <h2>{{current_headline.subtitle}}</h2>
-            <optinomic-logo class="w-logo" size="180" background="transparent" fill="rgba(255, 255, 255, 0.15)" animation="155" stroke="transparent" stroke-width="12">
-            </optinomic-logo>
-            <a class="button--primary" ng-click="toStart()" du-smooth-scroll du-scrollspy offset="60">Lernen Sie jetzt</a>
-        </div>
-    </div>
-
-
-    <main id="start">
-        <section id="{{slide.url_label}}" ng-repeat="slide in slides" class="wow zoomIn">
-
-            <h2 class="subsection-title">
-                <strong class="subsection-number">#0{{$index + 1}}
-                    <small>| {{slide.url_label}}</small>
-                </strong>
-                {{slide.title}}
-            </h2>
-
-            <h3>{{slide.subtitle}}</h3>
-
-            <p>{{slide.url_label}} = Include {{slide.partial}} :: {{$index + 1}} Bacon ipsum dolor sit amet sausage tail capicola ground round hamburger ham hock. Short ribs pig andouille meatball, pastrami tri-tip fatback ham hock shank kielbasa swine. Rump pancetta jerky kielbasa doner beef ribs tongue hamburger strip steak drumstick andouille shoulder shank flank. Swine drumstick meatball pig beef sausage strip steak.</p>
-
-        </section>
+      <h2 id="get-started">Get Started.</h2>
+      <p>Read how to <a href="http://developers.google.com/web/starter-kit">Get Started</a> or check out the <a href="styleguide.html">Style Guide</a>.</p>
     </main>
 
-
-
-    <!-- Basic Scripts -->
-    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="/bower_components/optinomic-logo-master/lib/d3.v2.js"></script>
-    <script src="/bower_components/angular/angular.js"></script>
-    <script src="/bower_components/optinomic-logo-master/src/optinomic-logo.js"></script>
-
-
-    <!-- Other Scripts -->
-    <script src="/bower_components/angular-scroll/angular-scroll.js"></script>
-    <script src="/bower_components/ng-parallax/angular-parallax.js"></script>
-
-
-    <!-- Optinomic - Angular Scripts -->
-    <script src="/angular_scripts/main.js"></script>
-    <script src="/angular_scripts/factory.js"></script>
-    <script src="/angular_scripts/ctrl_main.js"></script>
-
-
     <!-- build:js scripts/main.min.js -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>
-    var wow = new WOW({
-        boxClass: 'wow', // animated element css class (default is wow)
-        animateClass: 'animated', // animation css class (default is animated)
-        offset: 300, // distance to the element when triggering the animation (default is 0)
-        mobile: true, // trigger animations on mobile devices (default is true)
-        live: true // act on asynchronously loaded content (default is true)
-    });
-    wow.init();
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-XXXXX-X', 'auto');
+      ga('send', 'pageview');
     </script>
-
-
-
-
-</body>
-
+    <!-- Built with love using Web Starter Kit -->
+  </body>
 </html>
