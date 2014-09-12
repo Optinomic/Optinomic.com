@@ -87,26 +87,27 @@
 
     <slide id="start">
 
-        <div class="slide" id="{{slide.id}}" ng-repeat="slide in slides">
-            <div class="slide-outer">
+        <div class="slide">
+            <div class="slide-outer" id="{{slide.id}}" ng-repeat="slide in slides">
                 <div class="slide-inner">
-                    <div class="slide-centered">
+                    <div class="slide-centered wow zoomIn">
 
-                        <div class="wow zoomIn">
+                        <div class="slide-content">
 
-                            <h2 class="subsection-title">
-                                <strong class="subsection-number">#0{{$index + 1}}
-                                    <small>| {{slide.url_label}}</small>
-                                </strong>
+                            <p class="slide-number">
+                                <strong>#0{{$index + 1}}</strong>
+                                | {{slide.url_label}}
+                            </p>
+
+                            <h2 class="slide-title">
                                 {{slide.title}}
                             </h2>
 
-                            <h3>{{slide.subtitle}}</h3>
-
-                            <p>{{slide.url_label}} = Include {{slide.partial}} :: {{$index + 1}} Bacon ipsum dolor sit amet sausage tail capicola ground round hamburger ham hock. Short ribs pig andouille meatball, pastrami tri-tip fatback ham hock shank kielbasa swine. Rump pancetta jerky kielbasa doner beef ribs tongue hamburger strip steak drumstick andouille shoulder shank flank. Swine drumstick meatball pig beef sausage strip steak.</p>
-
+                            <h3 class="slide-subtitle text-divider">{{slide.subtitle}}</h3>
                         </div>
 
+
+                        <div ng-include="slide.partial"></div>
 
 
                     </div>
@@ -114,6 +115,7 @@
             </div>
         </div>
     </slide>
+
 
 
 
@@ -143,7 +145,7 @@
     var wow = new WOW({
         boxClass: 'wow', // animated element css class (default is wow)
         animateClass: 'animated', // animation css class (default is animated)
-        offset: 300, // distance to the element when triggering the animation (default is 0)
+        offset: 180, // distance to the element when triggering the animation (default is 0)
         mobile: true, // trigger animations on mobile devices (default is true)
         live: true // act on asynchronously loaded content (default is true)
     });

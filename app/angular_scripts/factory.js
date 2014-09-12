@@ -55,7 +55,7 @@ app.factory('app_factory', function() {
             "url_label": 'Geschäftsleitung',
             "title": 'Geschäftsleitung.',
             "subtitle": 'SBB: Schneller, besser, billiger.',
-            "partial": '/partials/slide/datenerfassung.html',
+            "partial": '/partials/slide/about.html',
             "menu": true,
             "activated": false
         },{
@@ -63,7 +63,7 @@ app.factory('app_factory', function() {
             "url_label": 'Team',
             "title": 'Datenerfassung leicht gemacht.',
             "subtitle": 'Wirkt Ihre Behandlung oder war lediglich schönes Wetter?',
-            "partial": '/partials/slide/datenerfassung.html',
+            "partial": '/partials/slide/about.html',
             "menu": true,
             "activated": true
         },{
@@ -71,7 +71,7 @@ app.factory('app_factory', function() {
             "url_label": 'Kontakt',
             "title": 'Ich bin interessiert!',
             "subtitle": 'Kontaktieren Sie uns jetzt!',
-            "partial": '/partials/slide/datenerfassung.html',
+            "partial": '/partials/slide/about.html',
             "menu": true,
             "activated": true
         }]

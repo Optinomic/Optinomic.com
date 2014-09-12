@@ -9,33 +9,77 @@ section {
 
 }  
 
+
 .slide {
     width: 100%;
     height: $header_height;
-    border-bottom-style: solid; 
-    border-bottom-color: rgba(black, .12); 
-    border-bottom-width: 1px; 
 }
 
 .slide-outer {
     display: table;
     width: 100%;
     height: 100%;
+    min-height: 100%;
+    border-bottom-style: solid; 
+    border-bottom-color: rgba(black, .12); 
+    border-bottom-width: 1px; 
+
+}
+.slide-outer:nth-of-type(odd) {
+    background: rgba($colorBlue500, .15);
 }
 .slide-inner {
     display: table-cell;
     vertical-align: middle;
     text-align: center;
+    box-shadow:0 1px 2px 0 rgba(0, 0, 0, .26);
 }
 
 .slide-centered {
     position: relative;
     display: inline-block;
+    box-shadow:0 2px 5px 0 rgba(0, 0, 0, .26);
+    background: white;
     
-    width: 73%;
-    padding: 1em;
-    min-height: 80%;
+    max-width: 848px;
 }
+
+.slide-content {
+    padding: 24px;
+}
+.slide-number {
+    color: $colorBlue500;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.slide-title {
+    text-align: center;
+    margin-top: -32px;
+}
+
+.slide-subtitle {
+    text-align: center;
+    margin-top: -18px;
+}
+
+.slide-foto-footer {
+    width: 100%;
+    height: 156px;
+    overflow: hidden;
+    display: block;
+    z-index: 0 !important;
+    border-top-style: solid; 
+    border-top-color: $colorGrayDark;
+    border-top-width: 1px; 
+}
+
+
+.text-divider {
+    padding: 24px;
+}
+
+
 
 #welcome {
     position: relative;
@@ -58,11 +102,12 @@ section {
     left: 0;
     overflow: hidden;
     min-height: 110%;
+    min-width: 110%;
     margin-left: auto;
     margin-right: auto;
 }
 
-#welcome .w-content {
+.w-content {
     z-index: 1 !important;
     position: relative;
     text-align: center;
@@ -73,22 +118,22 @@ section {
 }
 
 
-#welcome .w-content h1 {
+.w-content h1 {
     font-size: 4.5em;
 }
-#welcome .w-content h2 {
+.w-content h2 {
 	margin-top: -24px;
     font-size: 2em;
 }
-#welcome .w-content a {
+.w-content a {
 	background-color: $colorGrayDark;
 	color: white;
 	border-color: $colorGrayLighter;
 }
-#welcome .w-content a:hover {
+.w-content a:hover {
 	background-color: $colorBlue500;
 }
-#welcome .w-content .w-logo {
+.w-content .w-logo {
 	margin-top: -160px;
 	margin-left: auto;
 	margin-right: auto;
@@ -106,6 +151,7 @@ section {
     margin-left: auto;
     margin-right: auto;
 }
+
 
 
 /** Larger Screens - desktops and tablets **/
