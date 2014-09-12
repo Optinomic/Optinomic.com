@@ -13,23 +13,21 @@ section {
 .slide {
     width: 100%;
     height: $header_height;
+    margin-top: 60px;
 }
 
+
 .slide-outer {
-    display: table;
-    width: 100%;
-    height: 100%;
-    min-height: 100%;
     border-bottom-style: solid; 
     border-bottom-color: rgba(black, .12); 
     border-bottom-width: 1px; 
 
 }
 .slide-outer:nth-of-type(odd) {
-    background: rgba($colorBlue500, .15);
+    background: $colorGrayLighter;
 }
 .slide-inner {
-    display: table-cell;
+    display: block;
     vertical-align: middle;
     text-align: center;
     box-shadow:0 1px 2px 0 rgba(0, 0, 0, .26);
@@ -45,7 +43,9 @@ section {
 }
 
 .slide-content {
-    padding: 24px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-top: -10px;
 }
 .slide-number {
     color: $colorBlue500;
@@ -56,6 +56,8 @@ section {
 .slide-title {
     text-align: center;
     margin-top: -32px;
+    
+    color: rgb(233,30,99);
 }
 
 .slide-subtitle {
@@ -64,8 +66,10 @@ section {
 }
 
 .slide-foto-footer {
+    height: 72px;
+    margin-top: 24px;
+
     width: 100%;
-    height: 156px;
     overflow: hidden;
     display: block;
     z-index: 0 !important;
@@ -74,6 +78,35 @@ section {
     border-top-width: 1px; 
 }
 
+.slide-header {
+    color: rgb(241, 241, 241);
+    fill: rgb(241, 241, 241);
+    background-color: rgb(66, 133, 244);
+
+    margin-bottom: 48px;
+
+    width: 100%;
+    height: 60px;
+    overflow: hidden;
+    display: block;
+    z-index: 0 !important;
+    border-bottom-style: solid; 
+    border-bottom-color: $colorGrayLighter;
+    border-bottom-width: 1px; 
+    text-align: left;
+    padding-left: 36px;
+}
+
+.slide-header h2 {
+    margin-top: -62px;
+    font-weight: thin;
+    font-size: 1.6em;
+}
+
+.slide-header-logo {
+    margin-left: -8px;
+    margin-top: 4px;
+}
 
 .text-divider {
     padding: 24px;
@@ -89,9 +122,12 @@ section {
     display: block;
     top: 60px;
     z-index: 0 !important;
+    border-top-style: solid; 
+	border-top-color: $colorGrayDark; 
+    border-top-width: 48px; 
     border-bottom-style: solid; 
-	border-bottom-color: $colorBlue500; 
-	border-bottom-width: 5px; 
+    border-bottom-color: $colorGrayDark; 
+    border-bottom-width: 48px; 
 }
 
 
@@ -101,7 +137,7 @@ section {
     top: 0;
     left: 0;
     overflow: hidden;
-    min-height: 110%;
+    min-height: 120%;
     min-width: 110%;
     margin-left: auto;
     margin-right: auto;
@@ -119,11 +155,15 @@ section {
 
 
 .w-content h1 {
-    font-size: 4.5em;
+    font-size: 1.6em;
+    font-weight: 800;
+    text-shadow: 0px 0px 6px #000000;
 }
 .w-content h2 {
-	margin-top: -24px;
-    font-size: 2em;
+    font-size: 1.2em;
+	margin-top: -12px;
+    min-height: 62px;
+    text-shadow: 0px 0px 6px #000000;
 }
 .w-content a {
 	background-color: $colorGrayDark;
@@ -153,12 +193,77 @@ section {
 }
 
 
+/** Larger Screens - desktops and tablets **/
+@media all and (min-width: 800px) {
+
+.slide {
+    margin-top: 0px;
+}
+
+    .slide-header h2 {
+        margin-top: -58px;
+        font-weight: thin;
+        font-size: 2em;
+    }
+
+    .slide-content {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+    .slide-foto-footer {
+        height: 108px;
+    }
+
+    .w-content h1 {
+        font-size: 2.7em;
+        font-weight: 400;
+    }
+    .w-content h2 {
+        font-size: 1.8em;
+        margin-top: -12px;
+        min-height: 92px;
+    }
+
+
+.slide-outer {
+    display: table;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    border-bottom-style: solid; 
+    border-bottom-color: rgba(black, .12); 
+    border-bottom-width: 1px; 
+
+}
+.slide-outer:nth-of-type(odd) {
+    background: $colorGrayLighter;
+}
+.slide-inner {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    box-shadow:0 1px 2px 0 rgba(0, 0, 0, .26);
+}
+
+
+}
 
 /** Larger Screens - desktops and tablets **/
 @media all and (min-width: 990px) {
-	#welcome {
-		top: 0px;
-	}
+
+    .slide-header h2 {
+        margin-top: -60px;
+        font-weight: thin;
+        font-size: 2.1em;
+    }
+
+    #welcome {
+        top: 0px;
+        border-top-width: 96px; 
+        border-bottom-width: 96px; 
+    }
+
+
 
 	#welcome .w-content .w-logo {
 		margin-top: -180px;

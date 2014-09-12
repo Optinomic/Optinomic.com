@@ -59,6 +59,7 @@ app.controller('MainCtrl', function($scope, $timeout, $document, parallaxHelper,
         $scope.slides_menu = menu_slides;
     }
 
+
     function Ticker() {
         $timeout(Ticker, 4500);
         var how_many = 3;
@@ -83,7 +84,7 @@ app.controller('MainCtrl', function($scope, $timeout, $document, parallaxHelper,
     var positionStart = angular.element(document.getElementById('start'));
     $scope.toStart = function() {
         console && console.log('You just scrolled to the start!', positionStart);
-        $document.scrollTo(positionStart, 60, 1500);
+        $document.scrollTo(positionStart, 0, 1500);
     }
 
 

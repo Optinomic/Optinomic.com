@@ -43,8 +43,8 @@
                 <img src="images/hamburger.svg" alt="Menu">
             </button>
             <div class="logo">
-                <a href="#welcome">
-                    <optinomic-logo size="48" background="transparent" fill="#EE3B16" animation="55" stroke="white" stroke-width="2" logo-src="/bower_components/optinomic-logo-master/src/optinomic.svg"></optinomic-logo>
+                <a href="#welcome" du-smooth-scroll offset="60">
+                    <optinomic-logo size="40" background="transparent" fill="#e91e63" animation="55" stroke="white" stroke-width="2" logo-src="/bower_components/optinomic-logo-master/src/optinomic.svg"></optinomic-logo>
                 </a>
             </div>
             <section class="app-bar-actions">
@@ -60,7 +60,7 @@
         <ul>
             <li class="logo-optinomic">
                 <a href="#welcome" du-smooth-scroll offset="60">
-                    <optinomic-logo size="48" background="transparent" fill="#e84e40" animation="55" stroke="white" stroke-width="2" logo-src="/bower_components/optinomic-logo-master/src/optinomic.svg"></optinomic-logo>
+                    <optinomic-logo size="48" background="transparent" fill="#e91e63" animation="55" stroke="white" stroke-width="2" logo-src="/bower_components/optinomic-logo-master/src/optinomic.svg"></optinomic-logo>
                 </a>
             </li>
             <li ng-repeat="slide in slides_menu">
@@ -85,36 +85,38 @@
 
 
 
-    <slide id="start">
+
+    <optinomic id="start">
 
         <div class="slide">
             <div class="slide-outer" id="{{slide.id}}" ng-repeat="slide in slides">
                 <div class="slide-inner">
                     <div class="slide-centered wow zoomIn">
 
+                        <div class="slide-header">
+                            <optinomic-logo class="slide-header-logo" size="48" background="transparent" fill="rgba(255, 255, 255, 0.15)" animation="155" stroke="transparent" stroke-width="12">
+                            </optinomic-logo>
+                            <h2>
+                                <strong>
+                                    <small>#</small>{{$index + 1}}</strong>
+                                &nbsp; &nbsp; {{slide.url_label}}
+                            </h2>
+                        </div>
+
                         <div class="slide-content">
-
-                            <p class="slide-number">
-                                <strong>#0{{$index + 1}}</strong>
-                                | {{slide.url_label}}
-                            </p>
-
                             <h2 class="slide-title">
                                 {{slide.title}}
                             </h2>
-
                             <h3 class="slide-subtitle text-divider">{{slide.subtitle}}</h3>
                         </div>
 
-
                         <div ng-include="slide.partial"></div>
-
 
                     </div>
                 </div>
             </div>
         </div>
-    </slide>
+    </optinomic>
 
 
 
@@ -145,7 +147,7 @@
     var wow = new WOW({
         boxClass: 'wow', // animated element css class (default is wow)
         animateClass: 'animated', // animation css class (default is animated)
-        offset: 180, // distance to the element when triggering the animation (default is 0)
+        offset: 96, // distance to the element when triggering the animation (default is 0)
         mobile: true, // trigger animations on mobile devices (default is true)
         live: true // act on asynchronously loaded content (default is true)
     });
