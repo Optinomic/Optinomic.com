@@ -44,7 +44,7 @@
             </button>
             <div class="logo">
                 <a href="#welcome">
-                    <optinomic-logo size="48" background="transparent" fill="#EE3B16" animation="55" stroke="white" stroke-width=2 logo-src="/bower_components/optinomic-logo-master/src/optinomic.svg"></optinomic-logo>
+                    <optinomic-logo size="48" background="transparent" fill="#EE3B16" animation="55" stroke="white" stroke-width="2" logo-src="/bower_components/optinomic-logo-master/src/optinomic.svg"></optinomic-logo>
                 </a>
             </div>
             <section class="app-bar-actions">
@@ -64,7 +64,7 @@
                 </a>
             </li>
             <li ng-repeat="slide in slides_menu">
-                <a href="#{{slide.url_label}}" du-smooth-scroll du-scrollspy offset="60">{{slide.url_label}}</a>
+                <a href="#{{slide.id}}" du-smooth-scroll du-scrollspy offset="60">{{slide.url_label}}</a>
             </li>
         </ul>
     </nav>
@@ -85,7 +85,7 @@
 
 
     <main id="start">
-        <section id="{{slide.url_label}}" ng-repeat="slide in slides" class="wow zoomIn">
+        <section id="{{slide.id}}" ng-repeat="slide in slides" class="wow zoomIn">
 
             <h2 class="subsection-title">
                 <strong class="subsection-number">#0{{$index + 1}}
