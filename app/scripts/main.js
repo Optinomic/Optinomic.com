@@ -25,7 +25,7 @@
     var body = document.body;
     var appbarElement = querySelector('.app-bar');
     var menuBtn = querySelector('.menu');
-    var main = querySelector('main');
+    var main = querySelector('slide');
 
     function closeMenu() {
         body.classList.remove('open');

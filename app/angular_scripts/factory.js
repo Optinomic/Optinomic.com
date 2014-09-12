@@ -39,7 +39,7 @@ app.factory('app_factory', function() {
             "url_label": 'Produkt',
             "title": 'Profession statt Konfession',
             "subtitle": 'Evidenzbasiertes Wissen über Ihren Patienten - per Knopfdruck.',
-            "partial": '/partials/slides/about.html',
+            "partial": '/partials/slide/about.html',
             "menu": true,
             "activated": true
         },{
@@ -47,7 +47,7 @@ app.factory('app_factory', function() {
             "url_label": 'Angebote',
             "title": 'Unsere Angebote',
             "subtitle": 'you say jump - we ask how height',
-            "partial": '/partials/slides/about.html',
+            "partial": '/partials/slide/about.html',
             "menu": true,
             "activated": true
         },{
@@ -55,7 +55,7 @@ app.factory('app_factory', function() {
             "url_label": 'Geschäftsleitung',
             "title": 'Geschäftsleitung.',
             "subtitle": 'SBB: Schneller, besser, billiger.',
-            "partial": '/partials/slides/datenerfassung.html',
+            "partial": '/partials/slide/datenerfassung.html',
             "menu": true,
             "activated": false
         },{
@@ -63,7 +63,7 @@ app.factory('app_factory', function() {
             "url_label": 'Team',
             "title": 'Datenerfassung leicht gemacht.',
             "subtitle": 'Wirkt Ihre Behandlung oder war lediglich schönes Wetter?',
-            "partial": '/partials/slides/datenerfassung.html',
+            "partial": '/partials/slide/datenerfassung.html',
             "menu": true,
             "activated": true
         },{
@@ -71,11 +71,11 @@ app.factory('app_factory', function() {
             "url_label": 'Kontakt',
             "title": 'Ich bin interessiert!',
             "subtitle": 'Kontaktieren Sie uns jetzt!',
-            "partial": '/partials/slides/datenerfassung.html',
+            "partial": '/partials/slide/datenerfassung.html',
             "menu": true,
             "activated": true
         }]
-        
+
 
 
     };

@@ -84,22 +84,36 @@
     </div>
 
 
-    <main id="start">
-        <section id="{{slide.id}}" ng-repeat="slide in slides" class="wow zoomIn">
 
-            <h2 class="subsection-title">
-                <strong class="subsection-number">#0{{$index + 1}}
-                    <small>| {{slide.url_label}}</small>
-                </strong>
-                {{slide.title}}
-            </h2>
+    <slide id="start">
 
-            <h3>{{slide.subtitle}}</h3>
+        <div class="slide" id="{{slide.id}}" ng-repeat="slide in slides">
+            <div class="slide-outer">
+                <div class="slide-inner">
+                    <div class="slide-centered">
 
-            <p>{{slide.url_label}} = Include {{slide.partial}} :: {{$index + 1}} Bacon ipsum dolor sit amet sausage tail capicola ground round hamburger ham hock. Short ribs pig andouille meatball, pastrami tri-tip fatback ham hock shank kielbasa swine. Rump pancetta jerky kielbasa doner beef ribs tongue hamburger strip steak drumstick andouille shoulder shank flank. Swine drumstick meatball pig beef sausage strip steak.</p>
+                        <div class="wow zoomIn">
 
-        </section>
-    </main>
+                            <h2 class="subsection-title">
+                                <strong class="subsection-number">#0{{$index + 1}}
+                                    <small>| {{slide.url_label}}</small>
+                                </strong>
+                                {{slide.title}}
+                            </h2>
+
+                            <h3>{{slide.subtitle}}</h3>
+
+                            <p>{{slide.url_label}} = Include {{slide.partial}} :: {{$index + 1}} Bacon ipsum dolor sit amet sausage tail capicola ground round hamburger ham hock. Short ribs pig andouille meatball, pastrami tri-tip fatback ham hock shank kielbasa swine. Rump pancetta jerky kielbasa doner beef ribs tongue hamburger strip steak drumstick andouille shoulder shank flank. Swine drumstick meatball pig beef sausage strip steak.</p>
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </slide>
 
 
 
