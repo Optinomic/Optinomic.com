@@ -112,7 +112,7 @@
                         </div>
 
 
-                        <div class="" ng-include="slide.partial"></div>
+                        <div class="slide-partial" ng-include="slide.partial"></div>
 
                         <div class="slide-foto-content">
                             <a href="#{{slides[$index-1].id}}" du-smooth-scroll duration="1000" offset="60">
@@ -159,6 +159,8 @@
     <!-- build:js scripts/main.min.js -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js"></script>
     <script src="scripts/main.js"></script>
+
+
     <!-- endbuild -->
     <script>
     var wow = new WOW({
