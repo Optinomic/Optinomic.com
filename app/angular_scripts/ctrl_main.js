@@ -40,6 +40,7 @@ app.controller('MainCtrl', function($scope, $timeout, $document, parallaxHelper,
             }
         }
 
+
         //console.log('get_visible_slides: visible_slides', visible_slides);
 
         // ------------------------------------
@@ -59,6 +60,23 @@ app.controller('MainCtrl', function($scope, $timeout, $document, parallaxHelper,
         $scope.slides_menu = menu_slides;
     }
 
+    $scope.add_slide = function(slide_id, slide_index) {
+        // Add slice if not already present
+        if ($scope.factory_data.slides[slide_id].activated != true) {
+            $scope.factory_data.slides[slide_id].activated = true;
+            $scope.slides.splice(slide_id, 0, $scope.factory_data.slides[slide_id]);
+        }
+        // Slides
+        get_visible_slides()
+
+        // Scroll to new Slide
+        $timeout(function() {
+            var jumpTo = $scope.factory_data.slides[slide_id].id;
+            var newSlide = angular.element(document.getElementById(jumpTo));
+            $document.scrollTo(newSlide, 60, 1000);
+        }, 500);
+
+    }
 
     function Ticker() {
         $timeout(Ticker, 4500);
