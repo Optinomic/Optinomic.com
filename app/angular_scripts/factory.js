@@ -44,24 +44,24 @@ app.factory('app_factory', function() {
             "activated": true
         },{
             "id": '11',
-            "url_label": 'GL',
-            "title": 'Geschäftsleitung.',
+            "url_label": 'Geschäftsleitung',
+            "title": 'Direktion und Geschäftsleitung.',
             "subtitle": 'SBB: Schneller, Besser, Billiger.',
             "partial": '/partials/slide/about.html',
             "menu": false,
             "activated": false
         },{
             "id": '12',
-            "url_label": 'QM',
-            "title": 'Qualitätsmanagement.',
+            "url_label": 'Qualitätsmanagement',
+            "title": 'Qualitätsmanagement (QM)',
             "subtitle": 'Gelebte Prozesse',
             "partial": '/partials/slide/about.html',
             "menu": false,
             "activated": false
         },{
             "id": '13',
-            "url_label": 'F&D',
-            "title": 'Forschung und Diagnostik.',
+            "url_label": 'Forschung und Diagnostik',
+            "title": 'Forschung und Diagnostik (F&D)',
             "subtitle": 'Ihre Daten',
             "partial": '/partials/slide/about.html',
             "menu": false,
@@ -77,7 +77,7 @@ app.factory('app_factory', function() {
         },{
             "id": '15',
             "url_label": 'Ärzte',
-            "title": 'Ärzte.',
+            "title": 'Psychiater und Somatiker',
             "subtitle": 'Individualisierte Prozessforschung und Dianosen',
             "partial": '/partials/slide/about.html',
             "menu": false,
@@ -85,7 +85,7 @@ app.factory('app_factory', function() {
         },{
             "id": '16',
             "url_label": 'Patienten',
-            "title": 'Patienten.',
+            "title": 'Klienten / Patienten.',
             "subtitle": 'Aktive Beteiligung am Prozess auch ausserhalb der Therpiestunde.',
             "partial": '/partials/slide/about.html',
             "menu": false,

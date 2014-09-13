@@ -62,7 +62,7 @@
                 </a>
             </li>
             <li ng-repeat="slide in slides_menu">
-                <a href="#{{slide.id}}" du-smooth-scroll du-scrollspy offset="60">{{slide.url_label}}</a>
+                <a href="#{{slide.id}}" du-smooth-scroll du-scrollspy duration="1500" offset="60">{{slide.url_label}}</a>
             </li>
         </ul>
     </nav>
@@ -77,7 +77,7 @@
             <h2>{{current_headline.subtitle}}</h2>
             <optinomic-logo class="w-logo" size="180" background="transparent" fill="rgba(255, 255, 255, 0.15)" animation="155" stroke="transparent" stroke-width="12">
             </optinomic-logo>
-            <a class="button--primary" href="#10" du-smooth-scroll offset="60">Lernen Sie jetzt</a>
+            <a class="button--primary" href="#10" du-smooth-scroll duration="2500" offset="60">Lernen Sie jetzt</a>
         </div>
     </div>
 
@@ -88,8 +88,8 @@
 
         <div class="slide">
             <div class="slide-outer" id="{{slide.id}}" ng-repeat="slide in slides">
-                <div class="slide-inner wow fadeInUp">
-                    <div class="slide-centered wow zoomIn">
+                <div class="slide-inner wow zoomIn">
+                    <div class="slide-centered">
 
                         <div class="slide-header">
                             <optinomic-logo class="slide-header-logo" size="48" background="transparent" fill="rgba(255, 255, 255, 0.15)" animation="155" stroke="transparent" stroke-width="12">
@@ -99,6 +99,9 @@
                                     <small>#</small>{{$index + 1}}</strong>
                                 &nbsp; &nbsp; {{slide.url_label}}
                             </h2>
+                            <div class="slide-nav-top">
+
+                            </div>
                         </div>
 
                         <div class="slide-content">
@@ -108,7 +111,23 @@
                             <h3 class="slide-subtitle text-divider">{{slide.subtitle}}</h3>
                         </div>
 
+
                         <div class="" ng-include="slide.partial"></div>
+
+                        <div class="slide-foto-content">
+                            <a href="#{{slides[$index-1].id}}" du-smooth-scroll duration="1000" offset="60">
+                                <span class="icon-circle"><i class="icon icon-chevron-up"></i>
+                                </span>
+                            </a>
+                            <a href="#{{slides[$index+1].id}}" du-smooth-scroll duration="1000" offset="60">
+                                <span class="icon-circle"><i class="icon icon-chevron-down"></i>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="slide-foto-footer">
+                            <img class="w-parallax" du-parallax x="accelleratedScroll" y="background" src="/images/ein_therapy.jpg" />
+
+                        </div>
 
                     </div>
                 </div>

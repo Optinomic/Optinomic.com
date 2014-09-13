@@ -78,6 +78,16 @@ section {
     border-top-width: 1px; 
 }
 
+.slide-foto-content {
+    z-index: 1 !important;
+    position: relative;
+    text-align: center;
+    color: white;
+    top: 108px;
+    float: right;
+    padding-right: 24px;
+}
+
 .slide-header {
     color: rgb(241, 241, 241);
     fill: rgb(241, 241, 241);
@@ -97,6 +107,24 @@ section {
     padding-left: 36px;
 }
 
+.slide-nav-top {
+    margin-top: -56px;
+    text-align: right;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10px;
+  display: inline;
+
+  }
+
+.slide-nav-top a {
+  text-decoration: none;
+  color: white;
+  -webkit-transition: background-color 0.2s ease-out;
+          transition: background-color 0.2s ease-out;
+  white-space: nowrap;
+}
+
 .slide-header h2 {
     margin-top: -62px;
     font-weight: thin;
@@ -111,10 +139,18 @@ section {
 .slide-links {
     display: block;
     text-align: left;
-    width: 350px;
-    min-width: 350px;
+    width: 320px;
     margin: auto;
 }
+
+  .slide-links a {
+    color: $colorBlue500 !important;
+  }
+
+  .slide-links a.active {
+    background: $colorBlue500;
+    color: white !important;
+  }
 
 .text-divider {
     padding: 24px;
